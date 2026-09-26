@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ShopVerse | Modern Online Store</title>
+  <title>ShopVerse | Online Store</title>
 
   <link rel="stylesheet" href="style.css">
 
@@ -26,6 +26,7 @@
     <nav>
       <a href="#home">Home</a>
       <a href="#products">Products</a>
+      <a href="#recommended">Recommended</a>
       <a href="#about">About</a>
     </nav>
 
@@ -42,7 +43,7 @@
 
     <div class="hero-content">
 
-      <p class="small-title">✨ NEW COLLECTION 2026</p>
+      <p class="small-title">✨ WELCOME TO SHOPVERSE</p>
 
       <h1>
         Find Products<br>
@@ -50,12 +51,12 @@
       </h1>
 
       <p class="hero-text">
-        Discover stylish products, great prices and everything
-        you need in one beautiful place.
+        Search thousands of products and discover
+        something perfect for you.
       </p>
 
       <button class="shop-button" onclick="shopNow()">
-        Shop Now →
+        Explore Products →
       </button>
 
     </div>
@@ -64,7 +65,7 @@
 
       <img
         src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80"
-        alt="Shopping Store"
+        alt="Shopping"
       >
 
     </div>
@@ -72,32 +73,83 @@
   </section>
 
 
-  <!-- FEATURES -->
+  <!-- SEARCH -->
 
-  <section class="features">
+  <section class="search-section" id="products">
 
-    <div class="feature">
-      <div>🚚</div>
-      <h3>Free Delivery</h3>
-      <p>On orders above ₹999</p>
+    <div class="search-box">
+
+      <span>🔍</span>
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for shoes, watches, phones..."
+        oninput="searchProducts()"
+      >
+
     </div>
 
-    <div class="feature">
-      <div>🔒</div>
-      <h3>Secure Payment</h3>
-      <p>100% secure checkout</p>
+
+    <!-- CATEGORIES -->
+
+    <div class="filters">
+
+      <button class="filter active" onclick="filterCategory('All', this)">
+        All
+      </button>
+
+      <button class="filter" onclick="filterCategory('Electronics', this)">
+        📱 Electronics
+      </button>
+
+      <button class="filter" onclick="filterCategory('Fashion', this)">
+        👕 Fashion
+      </button>
+
+      <button class="filter" onclick="filterCategory('Footwear', this)">
+        👟 Footwear
+      </button>
+
+      <button class="filter" onclick="filterCategory('Accessories', this)">
+        ⌚ Accessories
+      </button>
+
+      <button class="filter" onclick="filterCategory('Home', this)">
+        🏠 Home
+      </button>
+
     </div>
 
-    <div class="feature">
-      <div>↩️</div>
-      <h3>Easy Returns</h3>
-      <p>7-day easy returns</p>
-    </div>
 
-    <div class="feature">
-      <div>⭐</div>
-      <h3>Top Quality</h3>
-      <p>Products you can trust</p>
+    <!-- SORT -->
+
+    <div class="sort-area">
+
+      <span id="result-count">
+        12 Products
+      </span>
+
+      <select id="sortSelect" onchange="sortProducts()">
+
+        <option value="default">
+          Sort by
+        </option>
+
+        <option value="low">
+          Price: Low to High
+        </option>
+
+        <option value="high">
+          Price: High to Low
+        </option>
+
+        <option value="rating">
+          Highest Rated
+        </option>
+
+      </select>
+
     </div>
 
   </section>
@@ -105,141 +157,64 @@
 
   <!-- PRODUCTS -->
 
-  <section class="products" id="products">
+  <section class="products-section">
 
     <div class="section-heading">
 
-      <p>OUR PRODUCTS</p>
+      <p>EXPLORE OUR COLLECTION</p>
 
-      <h2>Featured Products</h2>
+      <h2>All Products</h2>
 
       <span>
-        Explore our most popular products
+        Find exactly what you're looking for
       </span>
 
     </div>
 
 
-    <div class="product-container">
+    <div
+      class="product-container"
+      id="productContainer">
+    </div>
 
 
-      <!-- PRODUCT 1 -->
+    <div
+      class="no-products"
+      id="noProducts">
 
-      <div class="card">
+      <div>🔍</div>
 
-        <div class="image-box">
+      <h2>No products found</h2>
 
-          <span class="badge">NEW</span>
+      <p>
+        Try another search or category.
+      </p>
 
-          <img
-            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
-            alt="Nike Shoes"
-          >
+    </div>
 
-        </div>
-
-        <div class="card-content">
-
-          <p class="category">FOOTWEAR</p>
-
-          <h3>Premium Nike Shoes</h3>
-
-          <div class="rating">
-            ⭐⭐⭐⭐⭐ <span>(120)</span>
-          </div>
-
-          <div class="price">
-            ₹4,999
-            <del>₹6,999</del>
-          </div>
-
-          <button class="add-button">
-            Add to Cart
-          </button>
-
-        </div>
-
-      </div>
+  </section>
 
 
-      <!-- PRODUCT 2 -->
+  <!-- RECOMMENDATIONS -->
 
-      <div class="card">
+  <section class="recommended" id="recommended">
 
-        <div class="image-box">
+    <div class="section-heading">
 
-          <span class="badge">SALE</span>
+      <p>JUST FOR YOU</p>
 
-          <img
-            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
-            alt="Smart Watch"
-          >
+      <h2>Recommended Products</h2>
 
-        </div>
+      <span>
+        Popular products you might love
+      </span>
 
-        <div class="card-content">
-
-          <p class="category">ELECTRONICS</p>
-
-          <h3>Smart Watch Pro</h3>
-
-          <div class="rating">
-            ⭐⭐⭐⭐⭐ <span>(98)</span>
-          </div>
-
-          <div class="price">
-            ₹7,999
-            <del>₹10,999</del>
-          </div>
-
-          <button class="add-button">
-            Add to Cart
-          </button>
-
-        </div>
-
-      </div>
+    </div>
 
 
-      <!-- PRODUCT 3 -->
-
-      <div class="card">
-
-        <div class="image-box">
-
-          <span class="badge">POPULAR</span>
-
-          <img
-            src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80"
-            alt="Smartphone"
-          >
-
-        </div>
-
-        <div class="card-content">
-
-          <p class="category">MOBILE</p>
-
-          <h3>Premium Smartphone</h3>
-
-          <div class="rating">
-            ⭐⭐⭐⭐⭐ <span>(245)</span>
-          </div>
-
-          <div class="price">
-            ₹89,999
-            <del>₹99,999</del>
-          </div>
-
-          <button class="add-button">
-            Add to Cart
-          </button>
-
-        </div>
-
-      </div>
-
-
+    <div
+      class="product-container"
+      id="recommendedContainer">
     </div>
 
   </section>
@@ -249,22 +224,20 @@
 
   <section class="about" id="about">
 
-    <div>
+    <p class="small-title">
+      WHY SHOPVERSE?
+    </p>
 
-      <p class="small-title">WHY SHOPVERSE?</p>
+    <h2>
+      Shopping made<br>
+      simple & beautiful.
+    </h2>
 
-      <h2>Shopping made<br>simple & beautiful.</h2>
-
-      <p>
-        ShopVerse brings together quality products,
-        attractive prices and a smooth shopping experience.
-      </p>
-
-      <button class="shop-button" onclick="shopNow()">
-        Explore Products →
-      </button>
-
-    </div>
+    <p>
+      ShopVerse helps you discover quality products,
+      compare options and find products that match
+      your interests.
+    </p>
 
   </section>
 
