@@ -7,9 +7,8 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ShopVerse</title>
+  <title>ShopVerse | Modern Online Store</title>
 
-  <!-- CSS FILE CONNECT -->
   <link rel="stylesheet" href="style.css">
 
 </head>
@@ -17,95 +16,274 @@
 <body>
 
   <!-- NAVBAR -->
-  <header>
 
-    <nav class="navbar">
+  <header class="navbar">
 
-      <h1>ShopVerse</h1>
+    <div class="logo">
+      Shop<span>Verse</span>
+    </div>
 
-      <ul>
-
-        <li><a href="#">Home</a></li>
-
-        <li><a href="#">Products</a></li>
-
-        <li><a href="#">Contact</a></li>
-
-      </ul>
-
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
     </nav>
+
+    <button class="cart-button" onclick="showCart()">
+      🛒 Cart <span id="cart-count">0</span>
+    </button>
 
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
 
-    <h2>Modern E-Commerce Store</h2>
+  <!-- HERO -->
 
-    <p>Buy premium products online</p>
+  <section class="hero" id="home">
 
-    <button>Shop Now</button>
+    <div class="hero-content">
 
-  </section>
+      <p class="small-title">✨ NEW COLLECTION 2026</p>
 
-  <!-- PRODUCTS -->
-  <section class="products">
+      <h1>
+        Find Products<br>
+        <span>You'll Love.</span>
+      </h1>
 
-    <h2>Featured Products</h2>
+      <p class="hero-text">
+        Discover stylish products, great prices and everything
+        you need in one beautiful place.
+      </p>
 
-    <div class="product-container">
+      <button class="shop-button" onclick="shopNow()">
+        Shop Now →
+      </button>
 
-      <!-- PRODUCT 1 -->
-      <div class="card">
+    </div>
 
-        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Shoes">
+    <div class="hero-image">
 
-        <h3>Nike Shoes</h3>
-
-        <p>₹4,999</p>
-
-        <button>Add to Cart</button>
-
-      </div>
-
-      <!-- PRODUCT 2 -->
-      <div class="card">
-
-        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="Watch">
-
-        <h3>Smart Watch</h3>
-
-        <p>₹7,999</p>
-
-        <button>Add to Cart</button>
-
-      </div>
-
-      <!-- PRODUCT 3 -->
-      <div class="card">
-
-        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="Phone">
-
-        <h3>iPhone</h3>
-
-        <p>₹89,999</p>
-
-        <button>Add to Cart</button>
-
-      </div>
+      <img
+        src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80"
+        alt="Shopping Store"
+      >
 
     </div>
 
   </section>
 
+
+  <!-- FEATURES -->
+
+  <section class="features">
+
+    <div class="feature">
+      <div>🚚</div>
+      <h3>Free Delivery</h3>
+      <p>On orders above ₹999</p>
+    </div>
+
+    <div class="feature">
+      <div>🔒</div>
+      <h3>Secure Payment</h3>
+      <p>100% secure checkout</p>
+    </div>
+
+    <div class="feature">
+      <div>↩️</div>
+      <h3>Easy Returns</h3>
+      <p>7-day easy returns</p>
+    </div>
+
+    <div class="feature">
+      <div>⭐</div>
+      <h3>Top Quality</h3>
+      <p>Products you can trust</p>
+    </div>
+
+  </section>
+
+
+  <!-- PRODUCTS -->
+
+  <section class="products" id="products">
+
+    <div class="section-heading">
+
+      <p>OUR PRODUCTS</p>
+
+      <h2>Featured Products</h2>
+
+      <span>
+        Explore our most popular products
+      </span>
+
+    </div>
+
+
+    <div class="product-container">
+
+
+      <!-- PRODUCT 1 -->
+
+      <div class="card">
+
+        <div class="image-box">
+
+          <span class="badge">NEW</span>
+
+          <img
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+            alt="Nike Shoes"
+          >
+
+        </div>
+
+        <div class="card-content">
+
+          <p class="category">FOOTWEAR</p>
+
+          <h3>Premium Nike Shoes</h3>
+
+          <div class="rating">
+            ⭐⭐⭐⭐⭐ <span>(120)</span>
+          </div>
+
+          <div class="price">
+            ₹4,999
+            <del>₹6,999</del>
+          </div>
+
+          <button class="add-button">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUCT 2 -->
+
+      <div class="card">
+
+        <div class="image-box">
+
+          <span class="badge">SALE</span>
+
+          <img
+            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
+            alt="Smart Watch"
+          >
+
+        </div>
+
+        <div class="card-content">
+
+          <p class="category">ELECTRONICS</p>
+
+          <h3>Smart Watch Pro</h3>
+
+          <div class="rating">
+            ⭐⭐⭐⭐⭐ <span>(98)</span>
+          </div>
+
+          <div class="price">
+            ₹7,999
+            <del>₹10,999</del>
+          </div>
+
+          <button class="add-button">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUCT 3 -->
+
+      <div class="card">
+
+        <div class="image-box">
+
+          <span class="badge">POPULAR</span>
+
+          <img
+            src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80"
+            alt="Smartphone"
+          >
+
+        </div>
+
+        <div class="card-content">
+
+          <p class="category">MOBILE</p>
+
+          <h3>Premium Smartphone</h3>
+
+          <div class="rating">
+            ⭐⭐⭐⭐⭐ <span>(245)</span>
+          </div>
+
+          <div class="price">
+            ₹89,999
+            <del>₹99,999</del>
+          </div>
+
+          <button class="add-button">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <div>
+
+      <p class="small-title">WHY SHOPVERSE?</p>
+
+      <h2>Shopping made<br>simple & beautiful.</h2>
+
+      <p>
+        ShopVerse brings together quality products,
+        attractive prices and a smooth shopping experience.
+      </p>
+
+      <button class="shop-button" onclick="shopNow()">
+        Explore Products →
+      </button>
+
+    </div>
+
+  </section>
+
+
   <!-- FOOTER -->
+
   <footer>
 
-    <p>© 2026 ShopVerse</p>
+    <div class="footer-logo">
+      Shop<span>Verse</span>
+    </div>
+
+    <p>
+      © 2026 ShopVerse. All Rights Reserved.
+    </p>
 
   </footer>
 
-  <!-- JAVASCRIPT FILE CONNECT -->
+
   <script src="app.js"></script>
 
 </body>
