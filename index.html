@@ -7,15 +7,23 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ShopVerse | Online Store</title>
+  <meta
+    name="description"
+    content="ShopVerse - Find products you'll love"
+  >
 
+  <title>ShopVerse | Modern Online Store</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
 
-  <!-- NAVBAR -->
+
+  <!-- ================= NAVBAR ================= -->
 
   <header class="navbar">
 
@@ -23,59 +31,105 @@
       Shop<span>Verse</span>
     </div>
 
+
     <nav>
+
       <a href="#home">Home</a>
+
       <a href="#products">Products</a>
+
       <a href="#recommended">Recommended</a>
+
       <a href="#about">About</a>
+
     </nav>
 
-    <button class="cart-button" onclick="showCart()">
-      🛒 Cart <span id="cart-count">0</span>
+
+    <button
+      class="cart-button"
+      onclick="showCart()">
+
+      🛒 Cart
+
+      <span id="cart-count">0</span>
+
     </button>
 
   </header>
 
 
-  <!-- HERO -->
 
-  <section class="hero" id="home">
+  <!-- ================= HERO ================= -->
+
+  <section
+    class="hero"
+    id="home">
+
+
+    <!-- LEFT SIDE -->
 
     <div class="hero-content">
 
-      <p class="small-title">✨ WELCOME TO SHOPVERSE</p>
-
-      <h1>
-        Find Products<br>
-        <span>You'll Love.</span>
-      </h1>
-
-      <p class="hero-text">
-        Search thousands of products and discover
-        something perfect for you.
+      <p class="small-title">
+        ✨ WELCOME TO SHOPVERSE
       </p>
 
-      <button class="shop-button" onclick="shopNow()">
+
+      <h1>
+
+        Find Products
+
+        <br>
+
+        <span>You'll Love.</span>
+
+      </h1>
+
+
+      <p class="hero-text">
+
+        Discover stylish products, great prices
+        and everything you need in one beautiful place.
+
+      </p>
+
+
+      <button
+        class="shop-button"
+        onclick="shopNow()">
+
         Explore Products →
+
       </button>
 
     </div>
+
+
+
+    <!-- RIGHT SIDE -->
 
     <div class="hero-image">
 
       <img
         src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80"
-        alt="Shopping"
+        alt="Modern shopping store"
       >
 
     </div>
 
+
   </section>
 
 
-  <!-- SEARCH -->
 
-  <section class="search-section" id="products">
+  <!-- ================= SEARCH & FILTER ================= -->
+
+  <section
+    class="search-section"
+    id="products">
+
+
+    <!-- SEARCH BOX -->
 
     <div class="search-box">
 
@@ -91,173 +145,311 @@
     </div>
 
 
-    <!-- CATEGORIES -->
+
+    <!-- CATEGORY FILTERS -->
 
     <div class="filters">
 
-      <button class="filter active" onclick="filterCategory('All', this)">
+
+      <button
+        class="filter active"
+        onclick="filterCategory('All', this)">
+
         All
+
       </button>
 
-      <button class="filter" onclick="filterCategory('Electronics', this)">
+
+      <button
+        class="filter"
+        onclick="filterCategory('Electronics', this)">
+
         📱 Electronics
+
       </button>
 
-      <button class="filter" onclick="filterCategory('Fashion', this)">
+
+      <button
+        class="filter"
+        onclick="filterCategory('Fashion', this)">
+
         👕 Fashion
+
       </button>
 
-      <button class="filter" onclick="filterCategory('Footwear', this)">
+
+      <button
+        class="filter"
+        onclick="filterCategory('Footwear', this)">
+
         👟 Footwear
+
       </button>
 
-      <button class="filter" onclick="filterCategory('Accessories', this)">
+
+      <button
+        class="filter"
+        onclick="filterCategory('Accessories', this)">
+
         ⌚ Accessories
+
       </button>
 
-      <button class="filter" onclick="filterCategory('Home', this)">
-        🏠 Home
-      </button>
 
     </div>
+
 
 
     <!-- SORT -->
 
     <div class="sort-area">
 
+
       <span id="result-count">
-        12 Products
+
+        8 Products
+
       </span>
 
-      <select id="sortSelect" onchange="sortProducts()">
+
+      <select
+        id="sortSelect"
+        onchange="sortProducts()">
+
 
         <option value="default">
+
           Sort by
+
         </option>
+
 
         <option value="low">
+
           Price: Low to High
+
         </option>
+
 
         <option value="high">
+
           Price: High to Low
+
         </option>
 
+
         <option value="rating">
+
           Highest Rated
+
         </option>
+
 
       </select>
 
+
     </div>
+
 
   </section>
 
 
-  <!-- PRODUCTS -->
+
+  <!-- ================= PRODUCTS ================= -->
 
   <section class="products-section">
 
+
     <div class="section-heading">
 
-      <p>EXPLORE OUR COLLECTION</p>
 
-      <h2>All Products</h2>
+      <p>
+        EXPLORE OUR COLLECTION
+      </p>
+
+
+      <h2>
+        All Products
+      </h2>
+
 
       <span>
         Find exactly what you're looking for
       </span>
 
+
     </div>
 
+
+
+    <!--
+
+      IMPORTANT:
+
+      JavaScript automatically
+      adds products here.
+
+    -->
 
     <div
       class="product-container"
       id="productContainer">
+
     </div>
 
+
+
+    <!-- NO PRODUCTS MESSAGE -->
 
     <div
       class="no-products"
       id="noProducts">
 
-      <div>🔍</div>
 
-      <h2>No products found</h2>
+      <div>
+        🔍
+      </div>
+
+
+      <h2>
+        No products found
+      </h2>
+
 
       <p>
         Try another search or category.
       </p>
 
+
     </div>
+
 
   </section>
 
 
-  <!-- RECOMMENDATIONS -->
 
-  <section class="recommended" id="recommended">
+  <!-- ================= RECOMMENDED ================= -->
+
+  <section
+    class="recommended"
+    id="recommended">
+
 
     <div class="section-heading">
 
-      <p>JUST FOR YOU</p>
 
-      <h2>Recommended Products</h2>
+      <p>
+        JUST FOR YOU
+      </p>
+
+
+      <h2>
+        Recommended Products
+      </h2>
+
 
       <span>
         Popular products you might love
       </span>
 
+
     </div>
 
+
+
+    <!--
+
+      Recommended products
+      will be added by JavaScript.
+
+    -->
 
     <div
       class="product-container"
       id="recommendedContainer">
+
     </div>
 
+
   </section>
 
 
-  <!-- ABOUT -->
 
-  <section class="about" id="about">
+  <!-- ================= ABOUT ================= -->
+
+  <section
+    class="about"
+    id="about">
+
 
     <p class="small-title">
+
       WHY SHOPVERSE?
+
     </p>
+
 
     <h2>
-      Shopping made<br>
+
+      Shopping made
+
+      <br>
+
       simple & beautiful.
+
     </h2>
 
+
     <p>
-      ShopVerse helps you discover quality products,
-      compare options and find products that match
-      your interests.
+
+      ShopVerse helps you discover quality
+      products, compare options and find
+      products that match your interests.
+
     </p>
+
 
   </section>
 
 
-  <!-- FOOTER -->
+
+  <!-- ================= FOOTER ================= -->
 
   <footer>
 
+
     <div class="footer-logo">
+
       Shop<span>Verse</span>
+
     </div>
 
+
     <p>
-      © 2026 ShopVerse. All Rights Reserved.
+
+      © 2026 ShopVerse.
+      All Rights Reserved.
+
     </p>
+
 
   </footer>
 
 
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <!--
+
+    IMPORTANT:
+
+    Keep app.js in the SAME folder
+    as index.html.
+
+  -->
+
   <script src="app.js"></script>
+
 
 </body>
 
